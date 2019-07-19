@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "641608026603",
+    "firebase_url": "https://cerpenovel-888f3.firebaseio.com",
+    "project_id": "cerpenovel-888f3",
+    "storage_bucket": "cerpenovel-888f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641608026603:android:d49ea25841b2f424",
+        "android_client_info": {
+          "package_name": "com.example.cerpenovel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641608026603-ltvtl7414tts4oc3ugk5tcjtlh9redei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cerpenovel",
+            "certificate_hash": "9d62381474ac6c097404541dc3dd01df0a1edf7a"
+          }
+        },
+        {
+          "client_id": "641608026603-k6a4l4uh5o608irhke4fqhekpjv7qadg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7Y6DpeUV6BSEOdQp6vaFcWzwReNxV61A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641608026603-k6a4l4uh5o608irhke4fqhekpjv7qadg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

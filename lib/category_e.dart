@@ -49,6 +49,7 @@ class _CatViewState extends State<CatView> {
         child: Center(
          child:new CircularProgressIndicator()),
       ) : new Container(
+
         color: Colors.grey[100],
         child: new ListView.builder(
           itemCount: dataJson == null? 0 : dataJson.length,

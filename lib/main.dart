@@ -13,17 +13,19 @@ import 'package:flutter/services.dart';
 
 void main(){
   runApp(new MaterialApp(
-    // builder: (BuildContext context,Widget child) {
-    //     var mQuery = MediaQuery.of(context).orientation;
-    //     double pBottom = 50.0;
-    //     if(mQuery==Orientation.landscape){
-    //       pBottom = 0.0;
-    //     }
+    builder: (BuildContext context,Widget child) {
+        var mQuery = MediaQuery.of(context).orientation;
+        double pBottom = 50.0;
+        if(mQuery==Orientation.landscape){
+          pBottom = 0.0;
+        }
 
-    //     return new Padding(
-    //       child:child,
-    //       padding:  EdgeInsets.only(bottom: pBottom));
-    //   }, 
+        return new Padding(
+         
+         child: child,
+          
+          padding:  EdgeInsets.only(bottom: pBottom));
+      }, 
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,

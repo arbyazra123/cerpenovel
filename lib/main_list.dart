@@ -37,18 +37,19 @@ class _Main_Book_ListState extends State<Main_Book_List> {
 //     }
 //   }
 
+
+static double highBotom = 0;
+
   static final MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
-    keywords: <String>['books', 'library', 'education'],
+    keywords: <String>['books', 'library', 'education','game','epub'],
     contentUrl: 'https://flutter.io',
     birthday: DateTime.now(),
-    childDirected: false,
     designedForFamilies: false,
-    gender:
-        MobileAdGender.male, // or MobileAdGender.female, MobileAdGender.unknown
-    testDevices: <String>[], // Android emulators are considered test devices
+    // or MobileAdGender.female, MobileAdGender.unknown
+     // Android emulators are considered test devices
   );
 
-  InterstitialAd myInterstitial = InterstitialAd(
+InterstitialAd myInterstitial = InterstitialAd(
     // Replace the testAdUnitId with an ad unit id from the AdMob dash.
     // https://developers.google.com/admob/android/test-ads
     // https://developers.google.com/admob/ios/test-ads
@@ -56,6 +57,7 @@ class _Main_Book_ListState extends State<Main_Book_List> {
     targetingInfo: targetingInfo,
     listener: (MobileAdEvent event) {
       print("InterstitialAd event is $event");
+      
     },
   );
 
@@ -68,6 +70,9 @@ class _Main_Book_ListState extends State<Main_Book_List> {
     targetingInfo: targetingInfo,
     listener: (MobileAdEvent event) {
       print("BannerAd event is $event");
+      if(event!= MobileAdEvent.failedToLoad){
+        highBotom=50.0;
+      }
     },
   );
   List<Container> CardView;

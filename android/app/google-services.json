@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:641608026603:android:d49ea25841b2f424",
         "android_client_info": {
-          "package_name": "com.example.cerpenovel"
+          "package_name": "com.jefarstudio.cerpenovel"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "641608026603-ltvtl7414tts4oc3ugk5tcjtlh9redei.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.cerpenovel",
+            "package_name": "com.jefarstudio.cerpenovel",
             "certificate_hash": "9d62381474ac6c097404541dc3dd01df0a1edf7a"
           }
         },

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jefarstudio.cerpenovel">
+    package="com.narendradaily.booklibrary">
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -8,7 +8,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="Cerpenovel"
+        android:label="NAC Book Library"
         android:icon="@drawable/launcher">
         <activity
             android:name=".MainActivity"
@@ -31,6 +31,6 @@
         </activity>
         <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
-                android:value="ca-app-pub-6095652561516356~7811623442"/>
+                android:value="ca-app-pub-8855503199362242~1638252901"/>
     </application>
 </manifest>

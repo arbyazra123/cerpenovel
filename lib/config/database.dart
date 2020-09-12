@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
@@ -46,12 +47,11 @@ class DatabaseHelper {
   Future _onCreate(Database db, int version) async {
     await db.execute('''
           CREATE TABLE $table (
-            $columnId INTEGER PRIMARY KEY,
+            $columnId TEXT PRIMARY KEY,
             $columnName TEXT NOT NULL,
             $columnCat TEXT NOT NULL,
             $columnPict TEXT NOT NULL,
             $columnDate TEXT NOT NULL,
-            $columnPub TEXT NOT NULL,
             $columnLink TEXT NOT NULL,
             $columnWriter TEXT NOT NULL,
             $columnFav INTEGER NOT NULL
@@ -87,10 +87,8 @@ class DatabaseHelper {
   Future<bool> search(String kode_buku) async {
     Database db = await instance.database;
     bool _isTrue = false;
-    var intKode = int.parse(kode_buku);
-    assert(intKode is int);
-    final r = Sqflite.firstIntValue(await db.query(table, where:'$columnId = ?',whereArgs:[intKode]));
-     if(r!=null){
+    final r = await db.rawQuery('SELECT * FROM $table WHERE $columnId = ?',[kode_buku]);
+     if(r.length>0){
       _isTrue = true;
      }
      return _isTrue;
@@ -108,9 +106,7 @@ class DatabaseHelper {
   // returned. This should be 1 as long as the row exists.
   Future<int> delete(String id) async {
     Database db = await instance.database;
-    var intID = int.parse(id);
-    assert(intID is int);
-    return await db.delete(table, where: '$columnId = ?', whereArgs: [intID]);
+    return await db.rawDelete("DELETE FROM $table WHERE $columnId = ?",[id]);
   }
   Future<int> deleteAll() async {
     Database db = await instance.database;

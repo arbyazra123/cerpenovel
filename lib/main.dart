@@ -29,14 +29,13 @@ void main(){
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
-        primaryColor: Colors.red[700],
-        accentColor: Colors.red
+        primaryColor: Colors.blue[700],
+        accentColor: Colors.blue
       ),
-    title: "CERPENOVEL",
+    title: "NAC Book Library",
     home: new MainActivity(),
     routes: <String,WidgetBuilder> {
       "/Main" : (BuildContext context) => new MainActivity(),
-      "/Fav_List" : (BuildContext context) => new Cat.CatView(),
     },
   ));
 }

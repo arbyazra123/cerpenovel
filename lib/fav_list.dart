@@ -37,7 +37,7 @@ _load = false;
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        title: Text("Favorite - CERPENOVEL"),
+        title: Text("Favorite - NAC Book Library"),
       ),
       drawer: DrawerWidget(),
       body: _load == true ? new Container(
@@ -57,7 +57,7 @@ _load = false;
                 child: new GestureDetector(
                 onTap: (){
                   Navigator.push(context,
-              MaterialPageRoute(builder: (context) =>  new DetailDart(judul_buku: dataJson[i]['name'],penulis_buku: dataJson[i]['Writer'],penerbit_buku:dataJson[i]['bookPub'] ,genre_buku:dataJson[i]['category'] ,tanggal_terbit: dataJson[i]['DateBook'],link_buku: dataJson[i]['linkBook'],kode_buku: dataJson[i]['id_books'].toString(),foto_buku:dataJson[i]['pictBook'],)
+              MaterialPageRoute(builder: (context) =>  new DetailDart(judul_buku: dataJson[i]['name'],penulis_buku: dataJson[i]['Writer'],genre_buku:dataJson[i]['category'] ,tanggal_terbit: dataJson[i]['DateBook'],link_buku: dataJson[i]['linkBook'],id: dataJson[i]['id_books'].toString(),foto_buku:dataJson[i]['pictBook'],)
               )
                   );
                         },

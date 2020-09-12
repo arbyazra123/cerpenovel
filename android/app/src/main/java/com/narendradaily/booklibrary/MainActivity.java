@@ -1,4 +1,4 @@
-package com.jefarstudio.cerpenovel;
+package com.narendradaily.booklibrary;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
